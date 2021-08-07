@@ -1,0 +1,1213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Titillium;
+  src: url(../fonts/TitilliumWeb-Regular.ttf);
+}
+
+@font-face {
+  font-family: Palette;
+  src: url(../fonts/PaletteMosaic-Regular.ttf);
+}
+
+a {
+  text-decoration: none;
+}
+
+/*Container*/
+.container {
+  min-width: 1140px;
+  margin: 0 auto;
+}
+
+/*Header*/
+
+.header {
+  padding-top: 28px;
+  padding-bottom: 28px;
+  width: 100%;
+  background-color: #87509c83;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*Navigation*/
+
+.nav {
+  font-size: 18px;
+  line-height: 18px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Titillium";
+}
+
+.nav-link {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s linear;
+  position: relative;
+}
+
+.nav-link::after {
+  display: block;
+  opacity: 0;
+  content: "";
+  width: 100%;
+  height: 2.5px;
+  background-color: #c86a40;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1px;
+  transition: opacity 0.2s linear;
+}
+
+.nav-link:hover {
+  color: #eb7d4b;
+}
+
+.nav-link:hover:after {
+  opacity: 1;
+}
+
+/*Intro*/
+
+.intro-inner {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 592px;
+  background-color: #87509c;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.intro-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.intro-text {
+  max-width: 910px;
+  font-size: 42px;
+  line-height: 49px;
+  color: #f7f3ea;
+  font-weight: 700;
+  font-family: "Titillium";
+  text-align: center;
+  margin-bottom: 68px;
+}
+
+/*Button*/
+
+.btn {
+  font-size: 18px;
+  letter-spacing: 0px;
+  line-height: 26px;
+  color: #ffffff;
+  font-weight: 600;
+  font-family: "Titillium";
+  text-decoration: none;
+  background-color: #eb7d4b;
+  padding: 19px 70px;
+  border-radius: 4px;
+  border-bottom: solid #c86a40;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+#more {
+  display: none;
+}
+/*SECTION ABOUT*/
+
+.section-about {
+  background-color: #17c2a4;
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.about-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-title {
+  font-size: 40px;
+  letter-spacing: 4px;
+  line-height: 30px;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Titillium";
+  text-align: center;
+  margin-top: 120px;
+}
+
+.about-title::after {
+  content: "";
+  display: block;
+  width: 87px;
+  height: 4px;
+  margin: 22px auto;
+  background-color: #14a58c;
+}
+
+.about-subtitle {
+  font-size: 18px;
+  letter-spacing: 0px;
+  line-height: 26px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Titillium Web";
+  text-align: center;
+  margin-bottom: 90px;
+  max-width: 610px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.card {
+  max-width: 190px;
+}
+
+.card-block {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+
+.images {
+  margin-bottom: 60px;
+}
+
+.images-container {
+  display: flex;
+  justify-content: center;
+}
+
+.img-title {
+  font-size: 24px;
+  letter-spacing: 0px;
+  line-height: 18px;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Titillium";
+  text-align: center;
+  margin-bottom: 33px;
+}
+
+.img-text {
+  width: 204px;
+  height: 192px;
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 24px;
+  color: #ffffff;
+  font-weight: 300;
+  font-family: "Titillium";
+  text-align: center;
+}
+
+/*SECTION TEAM*/
+.section-team {
+  background-color: #e7f1f8;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.team-title {
+  margin-top: 120px;
+  font-size: 41px;
+  letter-spacing: 4px;
+  line-height: 30px;
+  color: #3c4761;
+  font-weight: 700;
+  font-family: "Titillium";
+  text-align: center;
+}
+
+.team-title::after {
+  content: "";
+  display: block;
+  width: 87px;
+  height: 4px;
+  margin: 22px auto;
+  background-color: #c8d9e5;
+}
+.team-subtitle {
+  font-size: 18px;
+  letter-spacing: 0px;
+  line-height: 26px;
+  color: #3c4761;
+  font-weight: 400;
+  font-family: "Titillium";
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.team-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.img-team {
+  max-width: 201px;
+  max-height: 201px;
+  border-radius: 50%;
+  margin-bottom: 42px;
+  transition: all 0.5s;
+}
+
+.img-team:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.team-name {
+  font-size: 24px;
+  letter-spacing: 0px;
+  line-height: 18px;
+  color: #27283d;
+  font-weight: 700;
+  font-family: "Titillium";
+  margin-bottom: 20px;
+}
+
+.team-subname {
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 18px;
+  color: #30bae7;
+  font-weight: 400;
+  font-family: "Titillium";
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.team-text {
+  margin-bottom: 33px;
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 24px;
+  color: #3c4761;
+  font-weight: 300;
+  font-family: "Titillium";
+  text-align: center;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+}
+
+.team-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.link-img {
+  max-height: 33px;
+  max-width: 33px;
+  transition: 0.5s;
+  border-radius: 4px;
+  margin-bottom: 128px;
+}
+
+.link-img:hover {
+  border-radius: 50%;
+  transform: rotate(360deg);
+}
+
+*/
+
+/*SECTION SKILS*/
+.section-skils {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.skills-title {
+  margin-top: 120px;
+  font-size: 40px;
+  letter-spacing: 4px;
+  line-height: 30px;
+  color: #3c4761;
+  font-weight: 700;
+  font-family: "Titillium";
+  text-align: center;
+}
+
+.skills-title::after {
+  content: "";
+  display: block;
+  width: 87px;
+  height: 4px;
+  margin: 22px auto;
+  background-color: #dfe8ed;
+}
+.skills-subtitle {
+  font-size: 18px;
+  letter-spacing: 0px;
+  line-height: 26px;
+  color: #3c4761;
+  font-weight: 400;
+  font-family: "Titillium";
+  text-align: center;
+  margin-bottom: 90px;
+  max-width: 510px;
+}
+
+.skills-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.skills-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+.progress-text {
+  font-size: 24px;
+  letter-spacing: 0px;
+  line-height: 18px;
+  color: #3c4761;
+  font-weight: 800;
+  font-family: "Titillium";
+  display: flex;
+  justify-content: center;
+  padding-bottom: 123px;
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-skills {
+  margin-bottom: 33px;
+  width: 160px;
+  height: 160px;
+}
+
+/*SECTION PORTFOLIO*/
+.section-portfolio {
+  background-color: #ffdd99;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.portfolio-title {
+  font-size: 40px;
+  letter-spacing: 4px;
+  line-height: 30px;
+  color: #393939;
+  font-weight: 700;
+  font-family: "Titillium";
+  text-align: center;
+  margin-top: 120px;
+}
+
+.portfolio-title::after {
+  content: "";
+  display: block;
+  width: 87px;
+  height: 4px;
+  margin: 22px auto;
+  background-color: #e5c37f;
+}
+.portfolio-subtitle {
+  font-size: 18px;
+  letter-spacing: 0px;
+  line-height: 26px;
+  color: #393939;
+  font-weight: 400;
+  font-family: "Titillium";
+  text-align: center;
+  max-width: 510px;
+  margin-bottom: 145px;
+}
+
+.portfolio-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.portfolio-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.computer-text {
+  display: flex;
+  font-size: 18px;
+  letter-spacing: 0px;
+  line-height: 20px;
+  color: #393939;
+  font-weight: 400;
+  font-family: "Titillium";
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 65px;
+}
+
+.computer-img {
+  margin-bottom: 30px;
+  max-height: 311px;
+  max-width: 541px;
+}
+
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.computer {
+  display: flex;
+  flex-flow: column;
+}
+
+.second-row {
+  margin-bottom: 84px;
+}
+
+.computer-span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e2d3b393;
+}
+
+#btn {
+  width: 293px;
+  height: 70px;
+  border-radius: 4px;
+  background-color: #17c2a4;
+  font-size: 18px;
+  letter-spacing: 0px;
+  line-height: 26px;
+  color: #ffffff;
+  font-weight: 600;
+  font-family: "Titillium";
+  border: none;
+  border-bottom: solid #15b194;
+  margin-bottom: 110px;
+  transition: all 0.2s;
+}
+
+#btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.div-btn {
+  display: flex;
+  justify-content: center;
+}
+/*SECTION COMMENTS*/
+.section-comments {
+  background-color: #d74680;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.comments-title {
+  font-size: 40px;
+  letter-spacing: 4px;
+  line-height: 30px;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Titillium";
+  text-align: center;
+  margin-top: 120px;
+}
+
+.comments-title::after {
+  content: "";
+  display: block;
+  width: 87px;
+  height: 4px;
+  margin: 22px auto;
+  background-color: #b73c6d;
+}
+.comments-subtitle {
+  font-size: 18px;
+  letter-spacing: 0px;
+  line-height: 26px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Titillium";
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.comment-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.comment-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.comment {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 160px;
+}
+
+.comment-text {
+  max-width: 315px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-img {
+  max-width: 97px;
+  max-height: 97px;
+  border-radius: 50%;
+  margin-right: 48px;
+  transition: all 0.5s;
+}
+
+.comment-img:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.text-comment {
+  margin-bottom: 25px;
+  font-size: 20px;
+  letter-spacing: 0px;
+  line-height: 31px;
+  color: #ffffff;
+  font-style: italic;
+  font-family: "Titillium";
+  padding-top: 5px;
+}
+
+.comment-name {
+  font-size: 23px;
+  letter-spacing: 1px;
+  line-height: 26px;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Titillium";
+  margin-bottom: 5px;
+}
+
+.comment-subname {
+  font-size: 18px;
+  letter-spacing: 0px;
+  line-height: 26px;
+  color: #ffdd99;
+  font-weight: 400;
+  font-family: "Titillium";
+}
+/*FOOTER*/
+footer {
+  background-color: #ce286a;
+  display: flex;
+  align-items: center;
+  height: 113px;
+}
+
+.footer {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+
+.footer-link {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 24px;
+  letter-spacing: 0px;
+  line-height: 30px;
+  color: #ffffff;
+  font-weight: 600;
+  font-family: "Titillium";
+  text-align: center;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.footer-link::after {
+  display: block;
+  opacity: 0;
+  content: "";
+  width: 100%;
+  height: 2.5px;
+  background-color: #e575a2;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1px;
+  transition: opacity 0.2s linear;
+}
+
+.footer-link:hover {
+  color: #f4aac8;
+}
+
+.footer-link:hover:after {
+  opacity: 1;
+}
+
+.cuda-wrapper {
+  display: none;
+}
+
+@media screen and (max-width: 1176px) {
+  .container {
+    min-width: 1000px;
+  }
+}
+
+@media screen and (max-width: 1112px) {
+  .portfolio-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 1112px) {
+  .intro {
+    height: 100vh;
+  }
+
+  .header {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .portfolio-subtitle {
+    margin-bottom: 100px;
+  }
+
+  .second-row {
+    margin-bottom: 60px;
+  }
+
+  .computer-text {
+    margin-bottom: 60px;
+  }
+
+  #btn {
+    margin-bottom: 80px;
+  }
+
+  .computer-img {
+    margin-bottom: 30px;
+    min-height: 466px;
+    min-width: 812px;
+  }
+
+  .computer-text {
+    display: flex;
+    font-size: 28px;
+    letter-spacing: 0px;
+    line-height: 20px;
+    color: #393939;
+    font-weight: 400;
+    font-family: "Titillium";
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 65px;
+  }
+}
+
+@media screen and (max-width: 1032px) {
+  .content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .img-team {
+    max-width: 180px;
+    max-height: 180px;
+  }
+  .link-img {
+    max-height: 33px;
+    max-width: 33px;
+    transition: 0.5s;
+    border-radius: 4px;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 1004px) {
+  .container {
+    min-width: 750px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .intro-text {
+    max-width: 780px;
+    font-size: 32px;
+    line-height: 30px;
+    color: #f7f3ea;
+    font-weight: 600;
+    font-family: "Titillium";
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 911px) {
+  .comment-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .comment {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 812px) {
+  .intro-text {
+    max-width: 650px;
+    font-size: 32px;
+    line-height: 30px;
+    color: #f7f3ea;
+    font-weight: 600;
+    font-family: "Titillium";
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .container {
+    min-width: 600px;
+  }
+
+  .skills-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .skills-title {
+    margin-top: 100px;
+    font-size: 35px;
+    letter-spacing: 3px;
+  }
+
+  .team-title {
+    margin-top: 100px;
+    font-size: 35px;
+    letter-spacing: 3px;
+  }
+
+  .portfolio-title {
+    font-size: 35px;
+    letter-spacing: 3px;
+    margin-top: 100px;
+  }
+
+  .comments-title {
+    font-size: 35px;
+    letter-spacing: 3px;
+    margin-top: 100px;
+  }
+
+  .about-title {
+    font-size: 35px;
+    letter-spacing: 3px;
+    margin-top: 100px;
+  }
+
+  .portfolio-subtitle {
+    font-size: 18px;
+    letter-spacing: 0px;
+    line-height: 26px;
+    color: #393939;
+    font-weight: 400;
+    font-family: "Titillium";
+    text-align: center;
+    max-width: 350px;
+    margin-bottom: 70px;
+  }
+
+  .team-subtitle {
+    font-size: 18px;
+    letter-spacing: 0px;
+    line-height: 26px;
+    color: #3c4761;
+    font-weight: 400;
+    font-family: "Titillium";
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: 350px;
+  }
+
+  .computer-img {
+    margin-bottom: 30px;
+    min-height: 389px;
+    min-width: 676px;
+  }
+
+  .footer-link {
+    font-size: 20px;
+    letter-spacing: 0px;
+    line-height: 30px;
+    color: #ffffff;
+    font-weight: 550;
+    font-family: "Titillium";
+    text-align: center;
+    position: relative;
+    transition: all 0.2s;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .header {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .computer-img {
+    margin-bottom: 30px;
+    min-height: 283px;
+    min-width: 492px;
+  }
+}
+
+@media screen and (max-width: 602px) {
+  .comment {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  .comment-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    min-width: 450px;
+  }
+  .intro-text {
+    max-width: 550px;
+    font-size: 28px;
+    line-height: 30px;
+    color: #f7f3ea;
+    font-weight: 580;
+    font-family: "Titillium";
+    text-align: center;
+    margin-bottom: 55px;
+  }
+
+  .about-subtitle {
+    font-size: 18px;
+    letter-spacing: 0px;
+    line-height: 26px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Titillium Web";
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: 550px;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  #btn {
+    margin-bottom: 35px;
+  }
+
+  .progress-text {
+    padding-bottom: 50px;
+  }
+
+  .skills-title {
+    margin-top: 50px;
+    font-size: 35px;
+    letter-spacing: 3px;
+  }
+
+  .team-title {
+    margin-top: 50px;
+    font-size: 35px;
+    letter-spacing: 3px;
+  }
+
+  .portfolio-title {
+    font-size: 35px;
+    letter-spacing: 3px;
+    margin-top: 50px;
+  }
+
+  .comments-title {
+    font-size: 35px;
+    letter-spacing: 3px;
+    margin-top: 50px;
+  }
+
+  .about-title {
+    font-size: 35px;
+    letter-spacing: 3px;
+    margin-top: 50px;
+  }
+
+  .images {
+    margin-bottom: 30px;
+  }
+
+  .img-title {
+    font-size: 24px;
+    letter-spacing: 0px;
+    line-height: 18px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Titillium";
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .cuda {
+    display: block;
+    padding: 20px 0 20px;
+    font-family: "Palette";
+    color: white;
+    font-size: 25px;
+    letter-spacing: 3px;
+  }
+
+  .cuda-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .comment {
+    padding-left: 15px;
+  }
+}
+
+@media screen and (max-width: 548px) {
+  .computer-img {
+    margin-bottom: 25px;
+    max-height: 212px;
+    max-width: 369px;
+  }
+
+  .computer-text {
+    display: flex;
+    font-size: 18px;
+    letter-spacing: 0px;
+    line-height: 20px;
+    color: #393939;
+    font-weight: 400;
+    font-family: "Titillium";
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 65px;
+  }
+}
+
+@media screen and (max-width: 498px) {
+  .computer-img {
+    margin-bottom: 25px;
+    min-height: 159px;
+    min-width: 277px;
+  }
+}
+
+@media screen and (max-width: 452px) {
+  .about-subtitle {
+    font-size: 18px;
+    letter-spacing: 0px;
+    line-height: 26px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Titillium Web";
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: 450px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    min-width: 350px;
+  }
+}
+
+@media screen and (max-width: 387px) {
+  .computer-img {
+    margin-bottom: 25px;
+    max-height: 119px;
+    max-width: 208px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    max-width: 350px;
+  }
+
+  .skills-title {
+    font-size: 25px;
+    letter-spacing: 0px;
+    font-weight: 600;
+  }
+
+  .team-title {
+    font-size: 25px;
+    letter-spacing: 0px;
+    font-weight: 600;
+  }
+
+  .portfolio-title {
+    font-size: 25px;
+    letter-spacing: 0px;
+    font-weight: 600;
+  }
+
+  .comments-title {
+    font-size: 25px;
+    letter-spacing: 0px;
+    font-weight: 600;
+  }
+
+  #btn {
+    width: 245px;
+    height: 50px;
+  }
+
+  .portfolio-subtitle {
+    font-size: 18px;
+    letter-spacing: 0px;
+    line-height: 26px;
+    color: #393939;
+    font-weight: 400;
+    font-family: "Titillium";
+    text-align: center;
+    max-width: 320px;
+    margin-bottom: 70px;
+  }
+
+  .team-subtitle {
+    font-size: 16px;
+    letter-spacing: 0px;
+    line-height: 26px;
+    color: #3c4761;
+    font-weight: 400;
+    font-family: "Titillium";
+    text-align: center;
+    margin-bottom: 25px;
+    max-width: 320px;
+  }
+  .skills-subtitle {
+    font-size: 18px;
+    letter-spacing: 0px;
+    line-height: 26px;
+    color: #3c4761;
+    font-weight: 400;
+    font-family: "Titillium";
+    text-align: center;
+    margin-bottom: 90px;
+    max-width: 310px;
+  }
+
+  .intro-text {
+    max-width: 320px;
+    font-size: 28px;
+    line-height: 30px;
+    color: #f7f3ea;
+    font-weight: 580;
+    font-family: "Titillium";
+    text-align: center;
+    margin-bottom: 55px;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .container {
+    max-width: 320px;
+  }
+}
